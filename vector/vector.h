@@ -36,13 +36,13 @@ template <typename T>
 			return ((T*)_elements)[i];	
 		}
 */
-		T operator[](const int i)
+		T& operator[](const int i)
 		{
-			return (&_elements);	
+			return ((T*)(&_elements))[i];	
 		}
 
-		template <typename X>
-		friend std::ostream operator << (std::ostream& os, const Vector<X>& v);
+		//template <typename X>
+		//friend std::ostream operator << (std::ostream& os, const Vector<X>& v);
 	private:
 		void * _elements;
 		size_t _size;

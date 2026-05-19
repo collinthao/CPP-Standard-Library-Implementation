@@ -16,16 +16,18 @@ int main()
 	
 
 	std::cout << "Implementation: " << '\n';
-	for (size_t i = 0; i < v.size(); i++)
+	for (size_t i = 0; i < v.size() - 1; i++)
 	{
-		v[i] = i;
+		v[i] = i * 2;
+		std::cout << "v[" << v[i] << "] = " << v[i] << '\n';
 	}
 
 	std::cout << "Actual: " << '\n';
-	for (size_t i = 0; i < v2.size(); i++)
-	{
-		v2[i] = i;
-	}
 
+	for (size_t i = 0; i < v2.size() - 1; i++)
+	{
+		v2[i] = i * 2;
+		std::cout << "v2[" << "] = " << v2[i]  << '\n';
+	}
 	return 0;
 }
