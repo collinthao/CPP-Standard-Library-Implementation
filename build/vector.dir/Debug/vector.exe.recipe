@@ -2,10 +2,10 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Users\Collin\Projects\vector\build\x64\Debug\ZERO_CHECK</FullPath>
+      <FullPath>C:\Users\colli\projects\CPP-Standard-Library-Implementation\build\x64\Debug\ZERO_CHECK</FullPath>
     </ProjectOutput>
     <ProjectOutput>
-      <FullPath>C:\Users\Collin\Projects\vector\build\Debug\vector.exe</FullPath>
+      <FullPath>C:\Users\colli\projects\CPP-Standard-Library-Implementation\build\Debug\vector.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

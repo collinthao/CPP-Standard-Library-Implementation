@@ -1,6 +1,6 @@
-^C:\USERS\COLLIN\PROJECTS\VECTOR\BUILD\CMAKEFILES\76C371F716FE7A4B185B07794C30D410\GENERATE.STAMP.RULE
+^C:\USERS\COLLI\PROJECTS\CPP-STANDARD-LIBRARY-IMPLEMENTATION\BUILD\CMAKEFILES\28E658830A4890094C15008B30D54776\GENERATE.STAMP.RULE
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Collin/Projects/vector -BC:/Users/Collin/Projects/vector/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/Collin/Projects/vector/build/vector.slnx
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/colli/projects/CPP-Standard-Library-Implementation -BC:/Users/colli/projects/CPP-Standard-Library-Implementation/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/colli/projects/CPP-Standard-Library-Implementation/build/vector.slnx
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
