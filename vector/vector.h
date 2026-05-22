@@ -1,44 +1,58 @@
 #pragma once
 #include <iostream>
+#include <stdexcept>
 
 template <typename T>
 	class Vector
 	{
 	public:
-		Vector(size_t size = 0)
+		Vector(size_t size = 1)
 		:_size(size)
 		{
 			_elements = new T[size];				
 		};
 
-		~Vector(){};
+		~Vector()
+		{
+		};
 
-		size_t size()
+		constexpr size_t size()
 		{
 			return _size;
 		}
 
-		void resize(size_t size)
+		constexpr void resize(size_t size)
 		{
 			_size = size;
 			_elements = new T[size];	
 		}
 		
-		void push_back(T element)
+		constexpr void push_back(T element)
 		{
+			resize(_size + 1);
 			((T*)_elements)[_size] = element;	
 		}
-/*
- * TODO: This is the old implementation that allows us to get the element as an rvalue
- * the below one is what we're working on to return the lvalue
-		T operator[](const int i)
+
+		constexpr T& at(const int i)
 		{
-			return ((T*)_elements)[i];	
+			try
+			{
+				if (i > _size || i < 0)
+				{
+					throw std::invalid_argument("Specified index is not within bounds!");	
+				}
+				return ((T*)_elements)[i];	
+			}
+			catch(std::invalid_argument& e)
+			{
+				std::cerr << e.what() << '\n';
+				std::terminate();
+			}
 		}
-*/
+
 		T& operator[](const int i)
 		{
-			return ((T*)(&_elements))[i];	
+			return ((T*)_elements)[i];	
 		}
 
 		//template <typename X>
@@ -47,7 +61,7 @@ template <typename T>
 		void * _elements;
 		size_t _size;
 	};
-/*
+
 template <typename X>
 std::ostream operator << (std::ostream& os, const Vector<X> v)
 {
@@ -57,4 +71,4 @@ std::ostream operator << (std::ostream& os, const Vector<X> v)
 	}
 	return os;
 }
-*/
+
