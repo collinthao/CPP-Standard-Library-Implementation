@@ -14,20 +14,17 @@ int main()
 	v.resize(4);
 	v.push_back(17);
 	
-	std::cout << "Implementation size: " << v.size() << '\n';
 	int currSize = v.size();
 	for (size_t i = 0; i < v.size() - 1; i++)
 	{
 		v.at(i) = i * 2;
-		std::cout << "v[" << i <<  "] = " << v[i]  << '\n';
 	}
 
-	std::cout << "Actual size: " << v2.size() << '\n';
 
 	for (size_t i = 0; i < v2.size() - 1; i++)
 	{
 		v2.at(i) = i * 2;
-		std::cout << "v2[" << i <<  "] = " << v2[i]  << '\n';
 	}
+
 	return 0;
 }

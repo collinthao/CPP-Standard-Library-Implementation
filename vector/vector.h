@@ -50,6 +50,21 @@ template <typename T>
 			}
 		}
 
+		constexpr T& front()
+		{
+			return at(0);
+		}
+
+		constexpr T& back()
+		{
+			return at(_size);
+		}
+
+		constexpr T* data()
+		{
+			return (T*)_elements;
+		}
+
 		T& operator[](const int i)
 		{
 			return ((T*)_elements)[i];	
